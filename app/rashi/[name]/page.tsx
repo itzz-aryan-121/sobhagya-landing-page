@@ -40,7 +40,7 @@ interface RashiPageProps {
 }
 
 
-export default function RashiPage({ params }: { params: { name: string } }) {
+export default function RashiPage({ params }: RashiPageProps) {
 const rashi = rashiSigns.find(sign => sign.name.toLowerCase() === params.name.toLowerCase());
 
 if (!rashi) {
