@@ -34,11 +34,9 @@ const rashiSigns: RashiSign[] = [
 ];
 
 export default function RashiPage({ params }: { params: { name: string } }) {
-  const rashi = rashiSigns.find(
-    (r) => r.name.toLowerCase() === params.name.toLowerCase()
-  );
+const rashi = rashiSigns.find(sign => sign.name.toLowerCase() === params.name.toLowerCase());
 
-  if (!rashi) {
+if (!rashi) {
     notFound();
   }
 

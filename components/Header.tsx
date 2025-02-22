@@ -17,10 +17,10 @@ const Header: React.FC = () => {
       <div className="flex items-center">
         <Link href="/">
           <Image
-            src="/image 1.png"
+            src="/monk logo (1).png"
             alt="Sobhagya"
-            width={55}
-            height={55}
+            width={65}
+            height={65}
             priority
             className="w-[50px] md:w-[65px] h-auto"
           />
