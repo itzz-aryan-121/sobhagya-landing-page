@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kumbh+Sans:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+.nextjs-static-indicator-toast-icon  {
+  display: none !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
