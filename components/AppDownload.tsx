@@ -10,72 +10,64 @@ const DownloadAppSection = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="md:w-1/2 flex justify-center">
+      {/* Image Section */}
+      <div className="md:w-1/2 flex justify-center mb-6 md:mb-0">
         <img
           src="/meditation (1).png"
           alt="Meditation"
-          className="w-72 md:w-96 rounded-lg"
+          className="w-60 sm:w-72 md:w-80 lg:w-96 rounded-lg"
         />
       </div>
-      <div className="md:w-1/2 text-center md:text-left mt-6 md:mt-0">
+
+      {/* Text & Download Section */}
+      <div className="md:w-1/2 text-center md:text-left">
         <h2
-          className="text-3xl md:text-4xl font-bold text-white"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
           style={{
-            fontFamily: "eb garamond",
-            fontWeight: "700",
-            fontSize: "50px",
-            lineHeight: "10px",
-            letterSpacing: "1%",
-            width: "596px",
-            height: "48px",
-            left: "672px",
-            margin: "auto",
+            fontFamily: "EB Garamond",
+            letterSpacing: "0.5px",
           }}
         >
           Download Our Mobile App
         </h2>
-        <p className="w-[562px] h-[92px]"style={{
-            margin: "auto",
-            lineHeight: "23px",
+
+        <p
+          className="mt-4 text-sm sm:text-base md:text-lg leading-relaxed px-4 md:px-0"
+          style={{
             fontFamily: "Poppins",
-            fontWeight:'500',
-            fontSize: "15px",
-            alignContent: "center",
-        }}>
+            fontWeight: "100",
+            fontSize: '15px',
+
+          }}
+        >
           Get daily horoscope updates, personalized astrological insights, and
           expert guidance anytime, anywhere. Explore zodiac predictions,
           remedies, and live consultations—all at your fingertips! Download now
           and unlock the wisdom of the stars.
         </p>
-        <div className="flex flex-col items-center gap-4 mt-6">
-          <div className="flex flex-row gap-4">
-            <a href="#">
-              <img
-                src="/appstore.png"
-                alt="App Store"
-                className="w-[156px] h-[53px] cursor-pointer"
-              />
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.sobhagya.sobhagya&hl=en">
-              <img
-                src="/playstore.png"
-                alt="Google Play"
-                className="w-[156px] h-[53px] cursor-pointer"
-              />
-            </a>
-          </div>
-          <p className="mt-4 italic text-center w-[562px] h-[23px] left-[689px]" style={{
-                fontWeight: '300',
-                fontFamily: 'Poppins',
-                fontSize:'16px',
-                lineHeight:'23px',
-                letterSpacing:'0%',
-                color:'#ffffff',
-                margin: 'auto',
-          }}>
-            Stay Connected with Astrology!
-          </p>
+
+        {/* App Store Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-6">
+          <a href="#">
+            <img
+              src="/appstore.png"
+              alt="App Store"
+              className="w-40 sm:w-44 md:w-48 cursor-pointer"
+            />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.sobhagya.sobhagya&hl=en">
+            <img
+              src="/playstore.png"
+              alt="Google Play"
+              className="w-40 sm:w-44 md:w-48 cursor-pointer"
+            />
+          </a>
         </div>
+
+        {/* Tagline */}
+        <p className="mt-4 italic text-center md:text-left text-sm sm:text-base md:text-lg" style={{ fontFamily: "Poppins", fontWeight: "300" }}>
+          Stay Connected with Astrology!
+        </p>
       </div>
     </section>
   );

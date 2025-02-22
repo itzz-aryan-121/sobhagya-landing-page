@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Eagle_Lake, Poppins } from "next/font/google";
 
 const eagleLake = Eagle_Lake({ subsets: ["latin"], weight: "400" });
-const poppins = Poppins({ 
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   display: "swap",
@@ -11,7 +11,9 @@ const poppins = Poppins({
 
 const Footer: React.FC = () => {
   return (
-    <footer className={`bg-[#373737] text-white py-12 relative overflow-hidden ${poppins.className}`}>
+    <footer
+      className={`bg-[#373737] text-white py-12 relative overflow-hidden ${poppins.className}`}
+    >
       {/* Top Left Zodiac Background Image */}
       <div className="absolute top-[-50px] left-[-150px] w-[400px] h-[300px] opacity-20">
         <Image
@@ -24,7 +26,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Right Zodiac Background Image */}
-      <div className="absolute bottom-[-100px] right-[50px] w-[400px] h-[300px] opacity-20">
+      <div className="absolute bottom-[-100px] right-[20px] w-[400px] h-[300px] opacity-20">
         <Image
           src="/zodiac-right.png"
           alt="Zodiac Signs"
@@ -50,11 +52,16 @@ const Footer: React.FC = () => {
                 objectFit="contain"
               />
             </div>
-            <p className={`${eagleLake.className} text-orange-400 text-3xl mb-6`}>
+            <p
+              className={`${eagleLake.className} text-orange-400 text-3xl mb-6`}
+            >
               Sobhagya
             </p>
             <div className="flex space-x-3">
-              <Link href="#" className="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center">
+              <Link
+                href="#"
+                className="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center"
+              >
                 <Image
                   src="/Group 13405.png"
                   alt="Facebook"
@@ -62,7 +69,10 @@ const Footer: React.FC = () => {
                   height={20}
                 />
               </Link>
-              <Link href="#" className="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center">
+              <Link
+                href="#"
+                className="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center"
+              >
                 <Image
                   src="/Group 13406.png"
                   alt="Email"
@@ -70,7 +80,10 @@ const Footer: React.FC = () => {
                   height={20}
                 />
               </Link>
-              <Link href="#" className="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center">
+              <Link
+                href="#"
+                className="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center"
+              >
                 <Image
                   src="/Group 13407.png"
                   alt="YouTube"
@@ -78,7 +91,10 @@ const Footer: React.FC = () => {
                   height={20}
                 />
               </Link>
-              <Link href="#" className="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center">
+              <Link
+                href="#"
+                className="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center"
+              >
                 <Image
                   src="/Group 13408.png"
                   alt="Twitter"
@@ -92,28 +108,54 @@ const Footer: React.FC = () => {
           {/* Navigation Links - Two columns */}
           <div className="grid grid-cols-2 gap-x-12 gap-y-2">
             <div className="space-y-2">
-              <Link href="/" className="flex items-center text-white hover:text-orange-400">
+              <Link
+                href="/"
+                className="flex items-center text-white hover:text-orange-400"
+              >
                 <span className="text-orange-400 mr-2 text-lg">›</span> Home
               </Link>
-              <Link href="/about" className="flex items-center text-white hover:text-orange-400">
+              <Link
+                href="/about"
+                className="flex items-center text-white hover:text-orange-400"
+              >
                 <span className="text-orange-400 mr-2 text-lg">›</span> About us
               </Link>
             </div>
             <div className="space-y-2">
-              <Link href="/privacy-policy" className="flex items-center text-white hover:text-orange-400">
-                <span className="text-orange-400 mr-2 text-lg">›</span> Privacy Policy
+              <Link
+                href="/privacy-policy"
+                className="flex items-center text-white hover:text-orange-400"
+              >
+                <span className="text-orange-400 mr-2 text-lg">›</span> Privacy
+                Policy
               </Link>
-              <Link href="/terms" className="flex items-center text-white hover:text-orange-400">
-                <span className="text-orange-400 mr-2 text-lg">›</span> Terms of Services
+              <Link
+                href="/terms"
+                className="flex items-center text-white hover:text-orange-400"
+              >
+                <span className="text-orange-400 mr-2 text-lg">›</span> Terms of
+                Services
               </Link>
-              <Link href="/refund-policy" className="flex items-center text-white hover:text-orange-400 whitespace-nowrap">
-                <span className="text-orange-400 mr-2 text-lg">›</span> Return and Refund Policy
+              <Link
+                href="/refund-policy"
+                className="flex items-center text-white hover:text-orange-400 whitespace-nowrap"
+              >
+                <span className="text-orange-400 mr-2 text-lg">›</span> Return
+                and Refund Policy
               </Link>
-              <Link href="/shipping-policy" className="flex items-center text-white hover:text-orange-400">
-                <span className="text-orange-400 mr-2 text-lg">›</span> Shipping Policy
+              <Link
+                href="/shipping-policy"
+                className="flex items-center text-white hover:text-orange-400"
+              >
+                <span className="text-orange-400 mr-2 text-lg">›</span> Shipping
+                Policy
               </Link>
-              <Link href="/store" className="flex items-center text-white hover:text-orange-400">
-                <span className="text-orange-400 mr-2 text-lg">›</span> Sobhagya Store
+              <Link
+                href="/store"
+                className="flex items-center text-white hover:text-orange-400"
+              >
+                <span className="text-orange-400 mr-2 text-lg">›</span> Sobhagya
+                Store
               </Link>
             </div>
           </div>
@@ -122,39 +164,81 @@ const Footer: React.FC = () => {
           <div className="space-y-4 mx-auto ">
             <div className="flex items-center gap-x-2">
               <img src="/Vector (1).png" alt="Website" className="w-5 h-5 " />
-              <a href="https://www.sobhagyaApp.com" className="text-white hover:text-orange-400 ">
+              <a
+                href="https://www.sobhagyaApp.com"
+                className="text-white hover:text-orange-400 "
+              >
                 www.sobhagyaApp.com
               </a>
             </div>
             <div className="flex items-center gap-x-2">
               <img src="/Vector (2).png" alt="Email" className="w-5 h-5" />
-              <a href="mailto:info@sobhagya.in" className="text-white hover:text-orange-400">
+              <a
+                href="mailto:info@sobhagya.in"
+                className="text-white hover:text-orange-400"
+              >
                 info@sobhagya.in
               </a>
             </div>
             <div className="flex items-center gap-x-2">
               <img src="/Vector (3).png" alt="Phone" className="w-5 h-5" />
               <span>
-                <a href="tel:+919876543201" className="text-white hover:text-orange-400">+91 98765 43201</a>,{" "}
-                <a href="tel:+918976543201" className="text-white hover:text-orange-400">+91 89765 43201</a>
+                <a
+                  href="tel:+919876543201"
+                  className="text-white hover:text-orange-400"
+                >
+                  +91 98765 43201
+                </a>
+                ,{" "}
+                <a
+                  href="tel:+918976543201"
+                  className="text-white hover:text-orange-400"
+                >
+                  +91 89765 43201
+                </a>
               </span>
             </div>
             <div className="flex items-start gap-x-2">
-              <img src="/Vector (4).png" alt="Location" className="w-5 h-5 mt-1" />
-              <p className="text-sm">55 GALI NO 9, PANCHSHEEL COLONY, GARH ROAD, NEAR NAI SADAK, Meerut, Meerut, Uttar Pradesh, 250002</p>
+              <img
+                src="/Vector (4).png"
+                alt="Location"
+                className="w-5 h-5 mt-1"
+              />
+              <p className="text-sm">
+                55 GALI NO 9, PANCHSHEEL COLONY, GARH ROAD, NEAR NAI SADAK,
+                Meerut, Meerut, Uttar Pradesh, 250002
+              </p>
             </div>
             <div className="flex items-center gap-x-2">
               <img src="/Vector (5).png" alt="Company" className="w-5 h-5" />
               <p>ELYSION SOFTWARES PRIVATE LIMITED</p>
             </div>
 
-            {/* App Store Links */}
-            <div className="flex space-x-4 mt-6">
-              <Link href="https://apps.apple.com" target="_blank">
-                <Image src="/appstore.png" alt="App Store" width={130} height={40} />
+            <div className="flex space-x-4 mt-6 cursor-pointer">
+              <Link
+                href="https://apps.apple.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/appstore.png"
+                  alt="App Store"
+                  width={130}
+                  height={40}
+                />
               </Link>
-              <Link href="https://play.google.com" target="_blank">
-                <Image src="/playstore.png" alt="Google Play" width={130} height={40} />
+
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.sobhagya.sobhagya"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/playstore.png"
+                  alt="Google Play"
+                  width={130}
+                  height={40}
+                />
               </Link>
             </div>
 
