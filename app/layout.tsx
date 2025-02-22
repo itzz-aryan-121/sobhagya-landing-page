@@ -24,13 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
         <Suspense fallback={<Loading />}>
+        <Header />
           <main>
             {children}
           </main>
-        </Suspense>
         <Footer />
+        </Suspense>
       </body>
     </html>
   );
