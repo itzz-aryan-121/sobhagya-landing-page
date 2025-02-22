@@ -33,20 +33,16 @@ const rashiSigns: RashiSign[] = [
     { name: 'Pisces', hindiName: 'मीन', image: '/Vector (17).png' },
 ];
 
-
 type Props = {
   params: Promise<{ name: string }>;
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-export default async function RashiPage({
-  params,
-  searchParams,
-}: Props){
-  const resolvedParams = await params;
+export default async function RashiPage({ params, searchParams }: Props) {
+  // Await both params and searchParams
+  const [resolvedParams, resolvedSearchParams] = await Promise.all([params, searchParams]);
+  
   const rashi = rashiSigns.find(sign => sign.name.toLowerCase() === resolvedParams.name.toLowerCase());
-
-
 
   if (!rashi) {
     notFound();
