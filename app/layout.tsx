@@ -9,7 +9,7 @@ import Loading from './rashi/[name]/loading';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Sobhagya - Astrology Consultation',
+  title: 'Sobhagya',
   description: 'Your trusted astrology consultation platform',
   icons:{
     icon: '/image 1.ico',
