@@ -33,14 +33,15 @@ const rashiSigns: RashiSign[] = [
     { name: 'Pisces', hindiName: 'मीन', image: '/Vector (17).png' },
 ];
 
-interface RashiPageProps {
+interface PageProps {
   params: {
     name: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 
-export default function RashiPage({ params }: RashiPageProps) {
+export default function RashiPage({ params,searchParams }: PageProps) {
 const rashi = rashiSigns.find(sign => sign.name.toLowerCase() === params.name.toLowerCase());
 
 if (!rashi) {
