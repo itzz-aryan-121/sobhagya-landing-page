@@ -19,6 +19,8 @@ const rashiSigns: RashiSign[] = [
   { name: 'Pisces', hindiName: 'मीन', image: '/Vector (17).png' },
 ];
 
+
+
 const RashiSection: React.FC = () => {
   const [loading, setLoading] = useState<string | null>(null);
 
