@@ -38,7 +38,7 @@ const RashiSection: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
           {rashiSigns.map((rashi) => (
             <Link 
-              href={`/rashi/${rashi.name.toLowerCase()}`}
+              href={`/rashi/${rashi.name.toLowerCase()}`} scroll={true}
               key={rashi.name}
               onClick={() => setLoading(rashi.name)}
             >

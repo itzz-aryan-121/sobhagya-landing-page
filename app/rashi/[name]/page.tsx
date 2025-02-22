@@ -18,6 +18,7 @@ import {
   getRulingInfo
 } from '@/types/rashiContent';
 
+
 const rashiSigns: RashiSign[] = [
     { name: 'Aries', hindiName: 'मेष', image: '/Vector (6).png' },
     { name: 'Taurus', hindiName: 'वृषभ', image: '/Vector (7).png' },
@@ -39,7 +40,8 @@ type Props = {
 }
 
 export default async function RashiPage({ params, searchParams }: Props) {
-  // Await both params and searchParams
+  
+  
   const [resolvedParams, resolvedSearchParams] = await Promise.all([params, searchParams]);
   
   const rashi = rashiSigns.find(sign => sign.name.toLowerCase() === resolvedParams.name.toLowerCase());
