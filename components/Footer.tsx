@@ -165,36 +165,36 @@ const Footer: React.FC = () => {
             <div className="flex items-center gap-x-2 ">
               <img src="/Vector (1).png" alt="Website" className="w-5 h-5  " />
               <a
-                href="https://www.sobhagyaApp.com"
+                href="https://www.sobhagya.in"
                 className="text-white hover:text-orange-400  "
               >
-                www.sobhagyaApp.com
+                www.sobhagya.in
               </a>
             </div>
             <div className="flex items-center gap-x-2">
               <img src="/Vector (2).png" alt="Email" className="w-5 h-5" />
               <a
-                href="mailto:info@sobhagya.in"
+                href="mailto:support@sobhagya.in"
                 className="text-white hover:text-orange-400"
               >
-                info@sobhagya.in
+                support@sobhagya.in
               </a>
             </div>
             <div className="flex items-center gap-x-2">
               <img src="/Vector (3).png" alt="Phone" className="w-5 h-5" />
               <span>
                 <a
-                  href="tel:+919876543201"
+                  href="tel:+918077781807"
                   className="text-white hover:text-orange-400"
                 >
-                  +91 98765 43201
+                  +91 8077781807
                 </a>
                 ,{" "}
                 <a
-                  href="tel:+918976543201"
+                  href="tel:+918383962622"
                   className="text-white hover:text-orange-400"
                 >
-                  +91 89765 43201
+                  +91 8383962622
                 </a>
               </span>
             </div>
@@ -205,8 +205,7 @@ const Footer: React.FC = () => {
                 className="w-5 h-5 mt-1"
               />
               <p className="text-sm">
-                55 GALI NO 9, PANCHSHEEL COLONY, GARH ROAD, NEAR NAI SADAK,
-                Meerut, Meerut, Uttar Pradesh, 250002
+              F-Block 10/9 Krishna Nagar Temple, Delhi, India, 110051
               </p>
             </div>
             <div className="flex items-center gap-x-2">
