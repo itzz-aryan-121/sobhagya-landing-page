@@ -5,17 +5,28 @@ import { useState, useEffect } from "react";
 
 export default function Loader({ onComplete }: { onComplete: () => void }) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((oldProgress) => {
+        const newProgress = oldProgress + 5;
+        return newProgress >= 100 ? 100 : newProgress;
+      });
+    }, 50);
+
     setTimeout(() => {
       setIsLoaded(true);
       onComplete();
+      clearInterval(interval);
     }, 2000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#FFDBBB] overflow-hidden"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#FFDBBB] overflow-hidden"
       initial={{ opacity: 1 }}
       animate={{ opacity: isLoaded ? 0 : 1 }}
       transition={{ duration: 1, ease: "easeInOut" }}
@@ -48,6 +59,16 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
           className="drop-shadow-[0px_0px_30px_rgba(255,215,0,0.9)]"
         />
       </motion.div>
+
+      {/* Smooth Progress Bar */}
+      <div className="w-1/4 h-2 mt-6 bg-gray-300 rounded-full overflow-hidden shadow-lg">
+        <motion.div
+          className="h-full bg-orange-600 rounded-full"
+          initial={{ width: "0%" }}
+          animate={{ width: `${progress}%` }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        />
+      </div>
     </motion.div>
   );
 }
