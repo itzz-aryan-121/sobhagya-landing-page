@@ -10,7 +10,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
     setTimeout(() => {
       setIsLoaded(true);
       onComplete(); 
-    }, 3000); 
+    }, 2500);
   }, []);
 
   return (
@@ -18,21 +18,19 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
       className="fixed inset-0 z-50 flex items-center justify-center bg-[#FFDBBB]"
       initial={{ opacity: 1 }}
       animate={{ opacity: isLoaded ? 0 : 1 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
+      transition={{ duration: 0.6, ease: "easeIn" }}
     >
-      {/* Smooth Zoom-In and Out Animation */}
       <motion.div
-        initial={{ scale: 0.5, opacity: 1 }}
+        initial={{ scale: 0.8 }}
         animate={{
-          scale: [0.5, 1.1, 0.9, 1.5, 2, 5, 20], 
-          opacity: [1, 1, 1, 0.9, 0.8, 0.5, 0], 
-          rotateX: [10, 5, 0, -5, 0], 
+          scale: 30,
+          opacity: 0
         }}
         transition={{
-          duration: 3, 
-          ease: "easeInOut",
+          duration: 2,
+          ease: [0.32, 0, 0.67, 0], // Continuous acceleration curve
         }}
-        style={{ perspective: "1000px" }}
+        style={{ perspective: "1200px" }}
       >
         <Image
           src="/monk logo (1).png"
