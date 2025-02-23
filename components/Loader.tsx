@@ -9,34 +9,42 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoaded(true);
-      onComplete(); 
-    }, 1900);
+      onComplete();
+    }, 2000);
   }, []);
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#FFDBBB]"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#FFDBBB] overflow-hidden"
       initial={{ opacity: 1 }}
       animate={{ opacity: isLoaded ? 0 : 1 }}
-      transition={{ duration: 0.6, ease: "easeIn" }}
+      transition={{ duration: 1, ease: "easeInOut" }}
     >
+      {/* Expanding Background Effect */}
       <motion.div
-        initial={{ scale: 0.8 }}
+        className="absolute w-screen h-screen bg-white"
+        initial={{ scale: 1, opacity: 0.5 }}
+        animate={{ scale: isLoaded ? 50 : 1, opacity: 0 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+      />
+
+      {/* 3D Zoom-In Animation */}
+      <motion.div
+        initial={{ scale: 1, rotateX: 0, rotateY: 0 }}
         animate={{
-          scale: 30,
-          opacity: 0
+          scale: isLoaded ? 20 : 1,
+          rotateX: isLoaded ? -15 : 0,
+          rotateY: isLoaded ? 10 : 0,
+          opacity: isLoaded ? 0 : 1,
         }}
-        transition={{
-          duration: 2,
-          ease: [0.32, 0, 0.67, 0], // Continuous acceleration curve
-        }}
-        style={{ perspective: "1200px" }}
+        transition={{ duration: 1.5, ease: [0.42, 0, 0.58, 1] }}
+        style={{ perspective: "1000px" }}
       >
         <Image
           src="/monk logo (1).png"
           alt="Sobhagya Logo"
-          width={200}
-          height={200}
+          width={150}
+          height={150}
           className="drop-shadow-[0px_0px_30px_rgba(255,215,0,0.9)]"
         />
       </motion.div>
