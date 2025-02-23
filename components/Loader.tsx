@@ -10,7 +10,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
     setTimeout(() => {
       setIsLoaded(true);
       onComplete(); 
-    }, 2500);
+    }, 1900);
   }, []);
 
   return (
