@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         {/* Title text */}
         <h2 className="text-orange-400 text-center text-2xl mb-12 underline decoration-orange-400 underline-offset-8">
           Your Trusted Astrology App for Accurate Predictions & Expert Guidance!
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24">
           {/* Logo and Social Media */}
           <div className="flex flex-col items-center  md:pr-10">
-            <div className="relative w-[250px] h-[250px] -mb-8">
+            <div className="relative w-[300px] h-[300px] -mb-8">
               <Image
                 src="/monk logo.png"
                 alt="Sobhagya"
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Navigation Links - Two columns */}
-          <div className="grid grid-cols-2 gap-x-12 gap-y-2">
+          <div className="">
             <div className="space-y-2">
               <Link
                 href="/"
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                 <span className="text-orange-400 mr-2 text-lg">›</span> About us
               </Link>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 mt-4 flex flex-col ">
               <Link
                 href="/privacy-policy"
                 className="flex items-center text-white hover:text-orange-400"
@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
                 href="/refund-policy"
                 className="flex items-center text-white hover:text-orange-400 whitespace-nowrap"
               >
-                <span className="text-orange-400 mr-2 text-lg">›</span> Return
+                <span className="text-orange-400 mr-2 text-lg whitespace-normal">›</span> Return
                 and Refund Policy
               </Link>
               <Link
@@ -161,12 +161,12 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4 mx-auto ">
-            <div className="flex items-center gap-x-2">
-              <img src="/Vector (1).png" alt="Website" className="w-5 h-5 " />
+          <div className="space-y-4  mx-auto ">
+            <div className="flex items-center gap-x-2 ">
+              <img src="/Vector (1).png" alt="Website" className="w-5 h-5  " />
               <a
                 href="https://www.sobhagyaApp.com"
-                className="text-white hover:text-orange-400 "
+                className="text-white hover:text-orange-400  "
               >
                 www.sobhagyaApp.com
               </a>
