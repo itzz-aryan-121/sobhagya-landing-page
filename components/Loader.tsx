@@ -60,15 +60,9 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
         />
       </motion.div>
 
-      {/* Smooth Progress Bar */}
-      <div className="w-1/4 h-2 mt-6 bg-gray-300 rounded-full overflow-hidden shadow-lg">
-        <motion.div
-          className="h-full bg-orange-600 rounded-full"
-          initial={{ width: "0%" }}
-          animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        />
-      </div>
-    </motion.div>
+
+      </motion.div>
+
+     
   );
 }
