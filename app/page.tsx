@@ -1,11 +1,11 @@
-import HeroSection from '@/components/HeroSection';
-import StoreSection from '@/components/StoreSection';
-import RashiSection from '@/components/RashiSection';
-import ConsultingSection from '@/components/ConsultingSection';
-import StatsBar from '@/components/StatsBar';
-import BlogSection from '@/components/BlogSection';
-import AppDownload from '@/components/AppDownload';
-import WhyConsult from '@/components/WhyConsult';
+import HeroSection from '@/app/components/HeroSection';
+import StoreSection from '@/app/components/StoreSection';
+import RashiSection from '@/app/components/RashiSection';
+import ConsultingSection from '@/app/components/ConsultingSection';
+import StatsBar from '@/app/components/StatsBar';
+import BlogSection from '@/app/components/BlogSection';
+import AppDownload from '@/app/components/AppDownload';
+import WhyConsult from '@/app/components/WhyConsult';
 
 
 export default function Home() {

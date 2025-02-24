@@ -87,7 +87,7 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-10 lg:space-x-14 text-gray-700 font-[400] text-[16px] lg:text-[18px]">
-          <Link  href = '/about' className="hover:text-orange-500">About Us</Link>
+          <Link href='/about' className="hover:text-orange-500">About Us</Link>
           <Link href="/services" className="hover:text-orange-500">Services</Link>
           <Link href="/shop" className="hover:text-orange-500">Shop</Link>
           <Link href="/contact" className="hover:text-orange-500">Contact Us</Link>

@@ -161,7 +161,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4  mx-auto ">
+          <div className="space-y-4 ">
             <div className="flex items-center gap-x-2 ">
               <img src="/Vector (1).png" alt="Website" className="w-5 h-5  " />
               <a

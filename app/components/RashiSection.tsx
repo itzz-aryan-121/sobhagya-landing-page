@@ -2,7 +2,6 @@
 import { RashiSign } from "@/types";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 const rashiSigns: RashiSign[] = [
@@ -22,14 +21,9 @@ const rashiSigns: RashiSign[] = [
 
 const RashiSection: React.FC = () => {
   const router = useRouter();
-  const [loadingRashi, setLoadingRashi] = useState<string | null>(null);
 
   const handleClick = (rashiName: string) => {
-    setLoadingRashi(rashiName);
-
-    setTimeout(() => {
-      router.push(`/rashi/${rashiName.toLowerCase()}`);
-    }, 1000);
+    router.push(`/rashi/${rashiName.toLowerCase()}`);
   };
 
   return (
@@ -48,24 +42,12 @@ const RashiSection: React.FC = () => {
               <div
                 key={rashi.name}
                 onClick={() => handleClick(rashi.name)}
-                className="bg-white p-6 rounded-lg flex flex-col items-center justify-center hover:shadow-lg transition-shadow cursor-pointer relative"
+                className="bg-white p-6 rounded-lg flex flex-col items-center justify-center hover:shadow-lg transition-shadow cursor-pointer"
               >
-                {/* Loader on the specific card */}
-                {loadingRashi === rashi.name && (
-                  <motion.div
-                    className="absolute inset-0 flex items-center justify-center bg-white/80"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="animate-spin rounded-full h-10 w-10 border-b-4 border-orange-500"></div>
-                  </motion.div>
-                )}
-                
                 <div className="w-16 h-16 mb-2">
                   <Image src={rashi.image} alt={rashi.name} width={64} height={64} />
                 </div>
-                <div className="text-gray-700 text-lg mb-2">{rashi.hindiName}</div>
+                <div className="text-gray-700 text-lg mb-2 mt-3">{rashi.hindiName}</div>
                 <div className="text-gray-600 text-sm">{rashi.name}</div>
               </div>
             ))}

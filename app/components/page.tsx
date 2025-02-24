@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { RashiSign } from '@/types';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import Footer from '@/components/Footer'; // Assuming Footer is a separate component
+import Footer from '@/app/components/Footer'; // Assuming Footer is a separate component
 
 const rashiSigns: RashiSign[] = [
   { name: 'Aries', hindiName: 'मेष', image: '/rashi/aries.png' },
