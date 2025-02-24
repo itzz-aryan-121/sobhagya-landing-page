@@ -1,11 +1,12 @@
 import { notFound } from 'next/navigation';
 import { RashiSign } from '@/types';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import Footer from '@/components/Footer'; // Assuming Footer is a separate component
 
 const rashiSigns: RashiSign[] = [
   { name: 'Aries', hindiName: 'मेष', image: '/rashi/aries.png' },
   { name: 'Taurus', hindiName: 'वृषभ', image: '/rashi/taurus.png' },
-  // ... other rashi signs
 ];
 
 export default function RashiPage({ params }: { params: { name: string } }) {
@@ -16,6 +17,19 @@ export default function RashiPage({ params }: { params: { name: string } }) {
   if (!rashi) {
     notFound();
   }
+
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    // Show footer after a delay (or when content is fully loaded)
+    const timer = setTimeout(() => {
+      setShowFooter(true);
+    }, 1500); // Adjust delay as needed
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -53,6 +67,9 @@ export default function RashiPage({ params }: { params: { name: string } }) {
           <p>Content about health...</p>
         </div>
       </div>
+
+      {/* Show footer only when state is true */}
+      {showFooter && <Footer />}
     </div>
   );
 }

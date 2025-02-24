@@ -20,18 +20,18 @@ import {
 
 
 const rashiSigns: RashiSign[] = [
-    { name: 'Aries', hindiName: 'मेष', image: '/Vector (6).png' },
-    { name: 'Taurus', hindiName: 'वृषभ', image: '/Vector (7).png' },
-    { name: 'Gemini', hindiName: 'मिथुन', image: '/Vector (8).png' },
-    { name: 'Cancer', hindiName: 'कर्क', image: '/Vector (9).png' },
-    { name: 'Leo', hindiName: 'सिंह', image: '/Vector (10).png' },
-    { name: 'Virgo', hindiName: 'कन्या', image: '/Vector (11).png' },
-    { name: 'Libra', hindiName: 'तुला', image: '/Vector (12).png' },
-    { name: 'Scorpio', hindiName: 'वृश्चिक', image: '/Vector (13).png' },
-    { name: 'Sagittarius', hindiName: 'धनु', image: '/Vector (14).png' },
-    { name: 'Capricorn', hindiName: 'मकर', image: '/Vector (15).png' },
-    { name: 'Aquarius', hindiName: 'कुंभ', image: '/Vector (16).png' },
-    { name: 'Pisces', hindiName: 'मीन', image: '/Vector (17).png' },
+    { name: 'Aries', hindiName: 'मेष', image: '/Vector (18).png' },
+    { name: 'Taurus', hindiName: 'वृषभ', image: '/Vector (19).png' },
+    { name: 'Gemini', hindiName: 'मिथुन', image: '/Vector (20).png' },
+    { name: 'Cancer', hindiName: 'कर्क', image: '/Vector (21).png' },
+    { name: 'Leo', hindiName: 'सिंह', image: '/Vector (22).png' },
+    { name: 'Virgo', hindiName: 'कन्या', image: '/Vector (23).png' },
+    { name: 'Libra', hindiName: 'तुला', image: '/Vector (24).png' },
+    { name: 'Scorpio', hindiName: 'वृश्चिक', image: '/Vector (25).png' },
+    { name: 'Sagittarius', hindiName: 'धनु', image: '/Vector (26).png' },
+    { name: 'Capricorn', hindiName: 'मकर', image: '/Vector (27).png' },
+    { name: 'Aquarius', hindiName: 'कुंभ', image: '/Vector (28).png' },
+    { name: 'Pisces', hindiName: 'मीन', image: '/Vector (29).png' },
 ];
 
 type Props = {
@@ -49,6 +49,10 @@ export default async function RashiPage({ params, searchParams }: Props) {
   if (!rashi) {
     notFound();
   }
+
+
+ 
+
 
   const rulingInfo = getRulingInfo(rashi.name);
 
