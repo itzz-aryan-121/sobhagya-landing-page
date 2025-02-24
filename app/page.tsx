@@ -7,6 +7,7 @@ import BlogSection from '@/components/BlogSection';
 import AppDownload from '@/components/AppDownload';
 import WhyConsult from '@/components/WhyConsult';
 
+
 export default function Home() {
   return (
     <main>
@@ -18,6 +19,9 @@ export default function Home() {
       <BlogSection />
       <AppDownload />
       <WhyConsult />
+     
+     
     </main>
+    
   );
 }

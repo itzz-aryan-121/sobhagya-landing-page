@@ -13,7 +13,7 @@ const eagleLake = Eagle_Lake({ subsets: ["latin"], weight: "400" });
 const texts = ["Sobhagya", "सौभाग्य"];
 const typingSpeed = 100;
 const eraseSpeed = 50;
-const delayBetween = 1200;
+const delayBetween = 7500;
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

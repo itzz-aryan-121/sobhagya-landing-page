@@ -49,8 +49,8 @@ const ConsultingSection: React.FC = () => {
             <Image
               src="/palm-reading.png"
               alt="Palm Reading"
-              width={500}
-              height={500}
+              width={200}
+              height={200}
               className="w-full"
               priority
             />

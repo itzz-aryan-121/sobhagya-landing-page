@@ -2,39 +2,40 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Loader from "@/components/Loader";
+import { usePathname } from "next/navigation";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const [showWebsite, setShowWebsite] = useState(false);
+  const [showFooter, setShowFooter] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    if (showWebsite) {
-      window.scrollTo(0, 0);
+    setShowWebsite(true);
+
+    if (pathname.startsWith("/rashi/")) {
+      // Delay footer rendering on "/rashi/[name]" pages
+      const timer = setTimeout(() => {
+        setShowFooter(true);
+      }, 1500); // Adjust timing if needed
+      return () => clearTimeout(timer);
+    } else {
+      setShowFooter(true);
     }
-  }, [showWebsite]);
+  }, [pathname]);
 
   return (
     <>
-      {!showWebsite && <Loader onComplete={() => setShowWebsite(true)} />}
-      {showWebsite && (
-        <motion.div
-          initial={{ opacity: 0, scale: 1.2 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="shadow-[0px_0px_50px_rgba(255,215,0,0.3)]"
-        >
-          {/* Exclude the footer initially */}
-          {React.Children.map(children, (child) => {
-            if (
-              React.isValidElement(child) &&
-              (child.type as any).name === "Footer"
-            ) {
-              return showWebsite ? child : null;
-            }
-            return child;
-          })}
-        </motion.div>
-      )}
+      <motion.div
+        initial={{ opacity: 0, scale: 1.2 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        className="shadow-[0px_0px_50px_rgba(255,215,0,0.3)]"
+      >
+        {children}
+      </motion.div>
+
+      {/* Conditionally render footer after delay */}
+      {showFooter && <footer />}
     </>
   );
 }
