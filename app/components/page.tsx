@@ -1,3 +1,5 @@
+'use client';
+
 import { notFound } from 'next/navigation';
 import { RashiSign } from '@/types';
 import Image from 'next/image';
