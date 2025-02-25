@@ -76,7 +76,7 @@ const Contact = () => {
                 />
               </div>
               <p className="text-gray-700 font-medium">
-                +91 98765 43201, +91 89765 43201
+              +91 8077781807, +91 8383962622
               </p>
             </div>
 
@@ -93,7 +93,7 @@ const Contact = () => {
                   className="w-7 h-7 z-10"
                 />
               </div>
-              <p className="text-gray-700 font-medium">SobhagyaApp@gmail.com</p>
+              <p className="text-gray-700 font-medium">support@sobhagya.in</p>
             </div>
           </div>
 

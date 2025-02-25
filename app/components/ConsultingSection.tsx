@@ -5,17 +5,17 @@ const consultingTopics: ConsultingTopic[] = [
   {
     title: 'Love & Relationship Issues',
     description: 'Struggling with love, marriage, or compatibility problems? Astrology helps resolve conflicts and find harmony in relationships.',
-    image: '/icons/Group 13367.png',
+    image: '/Group 13367 (1).png',
   },
   {
     title: 'Career & Financial Struggles',
     description: 'Facing job instability, business losses, or financial hurdles? Get guidance on the right career path and remedies for success.',
-    image: '/icons/Group 13368.png',
+    image: '/Group 13368.png',
   },
   {
     title: 'Health & Well-being Concerns',
     description: 'Experiencing ongoing health issues or emotional stress? Astrology identifies planetary influences affecting your well-being.',
-    image: '/icons/Group 13369.png',
+    image: '/Group 13369.png',
   },
 ];
 
