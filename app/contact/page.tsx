@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="bg-[#fdf8ef] ">
+    <div className="bg-[#fff] ">
       {/* Header Section */}
       <div
         className="relative h-38 md:h-44 bg-cover bg-center flex items-center justify-center"
