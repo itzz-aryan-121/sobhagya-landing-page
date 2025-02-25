@@ -121,7 +121,7 @@ const Contact = () => {
                 alt="Ellipse"
                 className="w-full h-full absolute z-0"
               />
-              <img src="/Youtube.png" alt="Youtube" className="w-6 h-6 z-10" />
+              <img src="/YouTube.png" alt="Youtube" className="w-6 h-6 z-10" />
             </div>
 
             <div className="relative w-12 h-12 flex items-center justify-center">
