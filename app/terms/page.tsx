@@ -2,10 +2,11 @@ import React from "react";
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center py-10 px-6">
-      <div className="bg-white shadow-lg rounded-xl p-8 max-w-3xl w-full border border-gray-200 relative">
-      <div
-          className="absolute inset-0 flex justify-center items-center opacity-20"
+    <div className="min-h-screen bg-gray-100 flex justify-center px-4 sm:px-6 lg:px-8 py-10">
+      <div className="bg-white shadow-lg rounded-xl p-6 sm:p-8 lg:p-10 max-w-3xl w-full border border-gray-200 relative">
+        {/* Background Logo */}
+        <div
+          className="absolute inset-0 flex justify-center items-center opacity-10 sm:opacity-15"
           style={{
             backgroundImage: "url('/monk logo.png')",
             backgroundSize: "contain",
@@ -13,13 +14,14 @@ const TermsOfService = () => {
             backgroundRepeat: "no-repeat",
           }}
         ></div>
+
         {/* Title Section */}
-        <h1 className="text-4xl font-bold text-[#745802] text-center mb-6 underline">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#745802] text-center mb-6 underline">
           Terms of Services
         </h1>
 
-        <p className="text-gray-700 text-lg leading-relaxed">
-          Welcome to www.sobhagya.in. By accessing or using our platform, you agree to comply with and be bound by these Terms of Service. If you do not agree, please refrain from using our services.
+        <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+          Welcome to <strong>www.sobhagya.in</strong>. By accessing or using our platform, you agree to comply with and be bound by these Terms of Service. If you do not agree, please refrain from using our services.
         </p>
 
         {/* Sections */}
@@ -60,11 +62,11 @@ const TermsOfService = () => {
               "We reserve the right to suspend or terminate access to our services for any user who violates these terms or engages in harmful activities.",
           },
         ].map((section, index) => (
-          <div key={index} className="mt-8">
-            <h2 className="text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
+          <div key={index} className="mt-6">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
               {section.title}
             </h2>
-            <p className="mt-2 text-gray-700 text-lg leading-relaxed">
+            <p className="mt-2 text-gray-700 text-sm sm:text-base leading-relaxed">
               {section.content}
             </p>
           </div>
@@ -72,10 +74,10 @@ const TermsOfService = () => {
 
         {/* User Responsibilities Section */}
         <div className="mt-8">
-          <h2 className="text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
+          <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
             User Responsibilities
           </h2>
-          <ul className="mt-3 space-y-3 text-gray-700 text-lg">
+          <ul className="mt-3 space-y-2 text-gray-700 text-sm sm:text-base">
             {[
               "Ensure the accuracy of personal information provided.",
               "Do not share account credentials with others.",
@@ -92,10 +94,10 @@ const TermsOfService = () => {
 
         {/* Governing Law */}
         <div className="mt-8">
-          <h2 className="text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
+          <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
             Governing Law
           </h2>
-          <p className="mt-2 text-gray-700 text-lg leading-relaxed">
+          <p className="mt-2 text-gray-700 text-sm sm:text-base leading-relaxed">
             These Terms of Service are governed by and interpreted in accordance with the laws of India. Any disputes arising will be subject to the jurisdiction of Indian courts.
           </p>
         </div>

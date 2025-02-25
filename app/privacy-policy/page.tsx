@@ -2,12 +2,12 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center py-10 px-6">
-      <div className="relative bg-white shadow-lg rounded-xl p-8 max-w-3xl w-full border border-gray-200">
+    <div className="min-h-screen bg-gray-100 flex justify-center py-10 px-4 sm:px-6 md:px-10 lg:px-16">
+      <div className="relative bg-white shadow-xl rounded-xl p-5 sm:p-8 md:p-10 max-w-4xl w-full border border-gray-200">
         
         {/* Blurred Monk Logo in Center */}
         <div
-          className="absolute inset-0 flex justify-center items-center opacity-20"
+          className="absolute inset-0 flex justify-center items-center opacity-10 sm:opacity-20"
           style={{
             backgroundImage: "url('/monk logo.png')",
             backgroundSize: "contain",
@@ -17,11 +17,11 @@ const PrivacyPolicy = () => {
         ></div>
 
         {/* Title Section */}
-        <h1 className="text-4xl font-bold text-[#745802] text-center mb-6 underline relative z-10">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#745802] text-center mb-6 underline relative z-10">
           Privacy Policy
         </h1>
 
-        <p className="text-gray-700 text-lg leading-relaxed relative z-10">
+        <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed relative z-10">
           www.sobhagya.in (“we”, “Elysion Softwares Services Private Limited”, “Sobhagya”) is committed to protecting the privacy of users, including astrologers and buyers/customers, whether registered or not. Please read this privacy policy carefully to understand how we use your information.
         </p>
 
@@ -34,22 +34,22 @@ const PrivacyPolicy = () => {
           { title: "Voice Recording and Microphone Permission", content: "Our app allows users to send voice messages instead of typing. We request microphone access to enable this feature." },
           { title: "Commitment", content: "We protect user privacy and ensure no sale or rent of personal information. We do not provide mental health solutions and may share necessary information with law enforcement when required." },
         ].map((section, index) => (
-          <div key={index} className="mt-8 relative z-10">
-            <h2 className="text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
+          <div key={index} className="mt-6 sm:mt-8 relative z-10">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
               {section.title}
             </h2>
-            <p className="mt-2 text-gray-700 text-lg leading-relaxed">
+            <p className="mt-2 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
               {section.content}
             </p>
           </div>
         ))}
 
         {/* Information Collected Section */}
-        <div className="mt-8 relative z-10">
-          <h2 className="text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
+        <div className="mt-6 sm:mt-8 relative z-10">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
             Information Collected
           </h2>
-          <ul className="mt-3 space-y-3 text-gray-700 text-lg">
+          <ul className="mt-3 space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base md:text-lg">
             {[
               "Personal Identifiable Information: Name, email, phone number, etc.",
               "Booking details for paid services, including payment info.",
@@ -65,11 +65,11 @@ const PrivacyPolicy = () => {
         </div>
 
         {/* Security Measures */}
-        <div className="mt-8 relative z-10">
-          <h2 className="text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
+        <div className="mt-6 sm:mt-8 relative z-10">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-orange-700 border-l-4 border-orange-500 pl-3">
             Security Measures
           </h2>
-          <p className="mt-2 text-gray-700 text-lg leading-relaxed">
+          <p className="mt-2 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
             We take necessary security measures to protect user data but cannot guarantee absolute security.
           </p>
         </div>
