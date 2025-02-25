@@ -14,8 +14,8 @@ const TermsOfService = () => {
           }}
         ></div>
         {/* Title Section */}
-        <h1 className="text-4xl font-bold text-[#745802] text-center mb-6">
-          Terms of Service
+        <h1 className="text-4xl font-bold text-[#745802] text-center mb-6 underline">
+          Terms of Services
         </h1>
 
         <p className="text-gray-700 text-lg leading-relaxed">
