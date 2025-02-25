@@ -5,46 +5,26 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Eagle_Lake } from "next/font/google";
 import { Menu, X } from "lucide-react";
-import { motion } from "framer-motion";
-
+import { motion, AnimatePresence } from "framer-motion";
 
 const eagleLake = Eagle_Lake({ subsets: ["latin"], weight: "400" });
 
 const texts = ["Sobhagya", "सौभाग्य"];
-const typingSpeed = 100;
-const eraseSpeed = 50;
-const delayBetween = 7500;
+const delayBetween = 5000; 
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [displayText, setDisplayText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    const handleTyping = () => {
-      if (!isDeleting && charIndex < texts[textIndex].length) {
-        setDisplayText((prev) => prev + texts[textIndex][charIndex]);
-        setCharIndex((prev) => prev + 1);
-      } else if (!isDeleting && charIndex === texts[textIndex].length) {
-        setTimeout(() => setIsDeleting(true), delayBetween);
-      } else if (isDeleting && charIndex > 0) {
-        setDisplayText((prev) => prev.slice(0, -1));
-        setCharIndex((prev) => prev - 1);
-      } else {
-        setIsDeleting(false);
-        setTextIndex((prev) => (prev + 1) % texts.length);
-        setCharIndex(0);
-      }
-    };
-
-    const interval = setInterval(handleTyping, isDeleting ? eraseSpeed : typingSpeed);
+    const interval = setInterval(() => {
+      setTextIndex((prev) => (prev + 1) % texts.length);
+    }, delayBetween);
+    
     return () => clearInterval(interval);
-  }, [charIndex, isDeleting, textIndex]);
+  }, []);
 
-  // Scroll Progress Bar Logic
   useEffect(() => {
     const updateScrollProgress = () => {
       const scrollTop = window.scrollY;
@@ -59,10 +39,9 @@ const Header: React.FC = () => {
 
   return (
     <>
-      {/* Fixed Header */}
       <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 px-6 md:px-12 h-[80px] md:h-[100px] flex items-center justify-between">
         {/* Logo and Brand Name */}
-        <div className="flex items-center">
+        <div className="flex items-center space-x-2">
           <Link href="/">
             <Image
               src="/monk logo (1).png"
@@ -73,16 +52,21 @@ const Header: React.FC = () => {
               className="w-[50px] md:w-[65px] h-auto"
             />
           </Link>
-          <motion.span
-            className={`${eagleLake.className} text-gray-700 ml-3 text-[24px] md:text-[32px]`}
-            style={{ color: "#F7971D" }}
-            key={displayText}
-            initial={{ opacity: 0.3 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
-          >
-            {displayText}
-          </motion.span>
+          <div className="ml-6 relative overflow-hidden w-[170px] h-[50px] flex items-center">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={texts[textIndex]}
+                className={`${eagleLake.className} absolute text-gray-700 text-[24px] md:text-[32px] leading-none`}
+                style={{ color: "#F7971D" }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+              >
+                {texts[textIndex]}
+              </motion.span>
+            </AnimatePresence>
+          </div>
         </div>
 
         {/* Desktop Navigation */}
@@ -122,7 +106,6 @@ const Header: React.FC = () => {
         />
       </header>
 
-      {/* Add padding to prevent content overlap */}
       <div className="pt-[80px] md:pt-[100px]" />
     </>
   );
