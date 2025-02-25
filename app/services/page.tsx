@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
+
 export default function Services() {
     const services = [
         { 
@@ -97,57 +98,58 @@ export default function Services() {
   }
       
     return (
-      <section className="bg-white w-screen ">
+      <section className="bg-white w-full">
         {/* Background Image for Heading */}
         <div
-          className="relative bg-cover bg-center py-20"
+          className="relative bg-cover bg-center py-16 sm:py-20"
           style={{ backgroundImage: "url('/service.png')" }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
-          <h2 className="relative text-center text-white text-5xl " style={{ fontFamily: "EB Garamond",fontWeight:'700',fontSize:'80px' }}>
+          <h2 className="relative text-center text-white text-3xl sm:text-5xl lg:text-6xl font-bold">
             Our Services
           </h2>
         </div>
   
-        <div className="w-screen mx-auto px-4 ">
-          <p className="text-center text-[#373737] text-base font-light max-w-7xl mx-auto mt-8 mb-12">
+        <div className="w-full mx-auto px-4">
+          <p className="text-center text-[#373737] text-base sm:text-lg font-light max-w-4xl mx-auto mt-6 sm:mt-8 mb-8">
             Get expert astrology insights with Kundli analysis, love & marriage compatibility, career guidance, financial astrology, and health predictions. 
             Explore palmistry, numerology, tarot, face reading, and Vastu Shastra for deeper understanding.
           </p>
   
           {/* Services Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <div
-                    key={index}
-                    className={`p-6 border-2 border-[#F7971D] rounded-lg flex flex-col items-center justify-center text-center transition-all cursor-pointer ${service.highlighted ? "bg-[#F7971D] text-white [&_a]:text-white" : "bg-white hover:shadow-lg"}` }
-                >
-                    <Image src={service.image} alt={service.name} width={61} height={61} />
-                    <h3 className="text-lg font-semibold mt-2">{service.name}</h3>
-                    <p className="text-sm mt-1">{service.description}</p>
-                    <a href={service.link} className="text-[#F7971D] font-medium mt-2 block">
-                        ...see more
-                    </a>
+                key={index}
+                className={`p-6 border-2 border-[#F7971D] rounded-lg flex flex-col items-center justify-center text-center transition-all cursor-pointer ${
+                  service.highlighted ? "bg-[#F7971D] text-white [&_a]:text-white" : "bg-white hover:shadow-lg"
+                }`}
+              >
+                <Image src={service.image} alt={service.name} width={61} height={61} />
+                <h3 className="text-lg font-semibold mt-2">{service.name}</h3>
+                <p className="text-sm mt-1">{service.description}</p>
+                <a href={service.link} className="text-[#F7971D] font-medium mt-2 block">
+                  ...see more
+                </a>
               </div>
             ))}
           </div>
   
           {/* Call to Action */}
-          <div className="bg-orange-50 py-20 mt-12 mb-20 text-center px-6 w-full ">
-            <div className="container  mx-auto px-6">
-            <p className="text-[#745802] text-lg font-light ">
-              Get expert astrology guidance tailored to your needs! Whether it’s Kundli analysis, love compatibility, career advice, or powerful remedies, our top astrologers are ready to help.
-            </p>
-            <p className="text-[#F7971D] font-semibold text-lg mt-3">
-              Book your consultation now via chat, call, or video and take the first step toward clarity and success!
-            </p>
-            <button className="mt-6 bg-white text-[#F7971D] py-5 px-16 rounded-lg font-semibold text-lg shadow-md hover:bg-orange-600 hover:text-white transition font-poppins">
-              Book Now
-            </button>
+          <div className="bg-orange-50 py-16 sm:py-20 mt-12 mb-20 text-center px-4 sm:px-6 w-full">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-[#745802] text-base sm:text-lg font-light">
+                Get expert astrology guidance tailored to your needs! Whether it’s Kundli analysis, love compatibility, career advice, or powerful remedies, our top astrologers are ready to help.
+              </p>
+              <p className="text-[#F7971D] font-semibold text-lg mt-3">
+                Book your consultation now via chat, call, or video and take the first step toward clarity and success!
+              </p>
+              <button className="mt-6 bg-white text-[#F7971D] py-3 sm:py-4 px-8 sm:px-16 rounded-lg font-semibold text-base sm:text-lg shadow-md hover:bg-orange-600 hover:text-white transition">
+                Book Now
+              </button>
+            </div>
           </div>
-        </div>
         </div>
       </section>
     );
-  
-    }
+}

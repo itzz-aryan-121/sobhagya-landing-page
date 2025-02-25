@@ -151,8 +151,9 @@ const Footer: React.FC = () => {
                 Policy
               </Link>
               <Link
-                href="/store"
+                href="https://store.sobhagya.in"
                 className="flex items-center text-white hover:text-orange-400"
+                target="_blank"
               >
                 <span className="text-orange-400 mr-2 text-lg">›</span> Sobhagya
                 Store

@@ -17,13 +17,13 @@ const HeroSection: React.FC = () => {
         {/* Left Side - Text Section */}
         <div className="text-center md:text-left md:w-1/2 max-w-full px-4 mt-6 md:mt-0">
           <h1
-            className="text-xl sm:text-3xl md:text-2xl lg:text-4xl font-bold whitespace-nowrap mb-4 sm:mb-4"
+            className="text-xl sm:text-2xl md:text-2xl lg:text-4xl font-bold whitespace-nowrap mb-4 sm:mb-4"
             style={{
               fontFamily: "EB Garamond",
               fontWeight: "700",
               lineHeight: "1.2",
               letterSpacing: "0%",
-              fontSize: 'clamp(1.7rem, 4vw, 3rem)'
+              fontSize: 'clamp(1.5rem, 4vw, 3rem)'
             }}
           >
             10023 Consultations Done
@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
           >
             Your's might be waiting
           </p>
-          <Link href="https://play.google.com/store/apps/details?id=com.sobhagya.sobhagya&hl=en">
+          <Link href="https://play.google.com/store/apps/details?id=com.sobhagya.sobhagya&hl=en" target="_blank">
             <button
               className="bg-white text-[#F7971D] px-8 sm:px-8 py-3 font-semibold hover:bg-orange-100 transition-colors mb-12 sm:mb-6 md:mb-0"
               style={{
