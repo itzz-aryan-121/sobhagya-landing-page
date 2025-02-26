@@ -1,8 +1,16 @@
 export interface BlogPost {
-    title: string;
-    image: string;
-    excerpt: string;
-  }
+  id: number;
+  title: string;
+  image: string;
+  content: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  readTime: string;
+  authorImage: string;
+  authorBio: string;
+  tags: string[];
+}
   
   export interface RashiSign {
     name: string;
