@@ -18,63 +18,81 @@ const RefundPolicy = () => {
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 text-[#745802] underline">
           Return & Refund Policy
         </h1>
+        
+        <p className="text-sm sm:text-base mb-6">
+          Last updated: March 29, 2025
+        </p>
 
         <section className="mb-6 sm:mb-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-orange-700">
-            Return & Replacement Policy
-          </h2>
           <p className="text-sm sm:text-base">
-            At <span className="font-semibold">Sobhagya</span>, we take pride in
-            offering handcrafted natural gemstones and jewelry. Due to the
-            nature of our products, please review our return/exchange policy
-            before making a request.
+            Thank you for using <span className="font-semibold">Sobhagya</span>, our audio call service.
+            If, for any reason, you are not entirely satisfied with our service, we invite you to review our policy on refunds and returns. 
+            This Return and Refund Policy outlines the terms and conditions applicable to any purchases made through our service.
           </p>
         </section>
 
         <section className="mb-6 sm:mb-8">
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-orange-700">
-            Return & Exchange Policy
+            Interpretation and Definitions
           </h2>
-          <p className="text-sm sm:text-base">
-            Return, refund, or exchange requests will be evaluated based on the
-            conditions below:
-          </p>
           <div className="mt-3 sm:mt-4 space-y-3">
             <div>
               <h3 className="text-base sm:text-lg font-medium text-orange-700">
-                Eligibility
+                Interpretation
               </h3>
               <p className="text-sm sm:text-base">
-                Returns or exchanges are only accepted for orders damaged during
-                transit or if an incorrect product was received. Videographic
-                proof is required.
+                The words with initial capitalization have specific meanings defined under the following conditions. 
+                These definitions apply whether they appear in singular or plural form.
               </p>
             </div>
             <div>
               <h3 className="text-base sm:text-lg font-medium text-orange-700">
-                Timeframe
+                Definitions
               </h3>
               <p className="text-sm sm:text-base">
-                Requests must be made within{" "}
-                <span className="font-semibold">7 days</span> of receiving the
-                product. The item must be returned in its original condition.
+                For the purpose of this Return and Refund Policy:
               </p>
+              <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base mt-2">
+                <li><strong>Website and App:</strong> These terms apply to your use of the Sobhagya website (https://sobhagya.in) and mobile application.</li>
+                <li><strong>Company:</strong> ELYSION SOFTWARES PRIVATE LIMITED (referred to as "we", "us", "our", or "Sobhagya").</li>
+                <li><strong>Your IAP Account:</strong> Your account with your Software Store (Apple App Store or Google Play Store) used for in-app purchases.</li>
+              </ul>
             </div>
           </div>
         </section>
 
         <section className="mb-6 sm:mb-8">
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-orange-700">
-            Non-Returnable Categories
+            Your Order Cancellation Rights
           </h2>
-          <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base">
-            <li>Custom Jewelry</li>
-            <li>Beads Bracelets</li>
-            <li>Rudraksha</li>
-            <li>Crystal Trees</li>
-            <li>Rakhi Products</li>
-            <li>Gift Cards</li>
-          </ul>
+          <p className="text-sm sm:text-base">
+            Since Sobhagya does not sell physical goods, there is no option for cancellation or return of purchases. 
+            Users make payments to purchase digital goods, which can be used for connecting with other Sobhagya users. 
+            Digital goods, including messages, coins, diamonds, etc., may be modified, removed, or expire 
+            (typically within 12 months) from the date of acquisition.
+          </p>
+        </section>
+
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-orange-700">
+            In-App Purchases
+          </h2>
+          <p className="text-sm sm:text-base">
+            When you make an in-app purchase, you will be prompted to enter details for your IAP Account, 
+            and your account will be charged in accordance with the terms disclosed at the time of purchase 
+            as well as the general terms for in-app purchases that apply to your account. 
+            Some Software Stores may charge a sales tax, depending on your location.
+          </p>
+        </section>
+
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-orange-700">
+            Subscriptions
+          </h2>
+          <p className="text-sm sm:text-base">
+            If you subscribe to an auto-recurring periodic subscription, your IAP Account will be billed until you cancel. 
+            Even if you delete your Sobhagya account or uninstall the app, your subscription will continue until canceled through your IAP Account.
+          </p>
         </section>
 
         <section className="mb-6 sm:mb-8">
@@ -82,65 +100,31 @@ const RefundPolicy = () => {
             Refund Process
           </h2>
           <p className="text-sm sm:text-base">
-            If approved, refunds will be credited within{" "}
-            <span className="font-semibold">10-12 working days</span> (subject
-            to bank processing times). COD refunds above INR 2,00,000 may
-            require additional details.
+            In general, payments once made are not refunded. However, we may make an exception if a refund is requested within 
+            <span className="font-semibold"> 14 days </span> 
+            of the transaction date, if the payment was made in a currency other than INR, the goods remain unused, 
+            and if refunds are mandated by applicable law.
           </p>
-        </section>
-
-        <section className="mb-6 sm:mb-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-orange-700">
-            Cancellation Policy
-          </h2>
-          <p className="text-sm sm:text-base">
-            Once an order is placed, cancellations are{" "}
-            <span className="font-semibold">not permitted</span> under any
-            circumstances.
-          </p>
-        </section>
-
-        <section className="mb-6 sm:mb-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-orange-700">
-            Late or Missing Refunds
-          </h2>
-          <p className="text-sm sm:text-base">
-            If you haven’t received your refund, check with your bank or credit
-            card provider. For further assistance, contact us at{" "}
-            <a href="mailto:support@sobhagya.in" className="text-blue-600">
-              support@sobhagya.in
-            </a>
-            .
-          </p>
-        </section>
-
-        <section className="mb-6 sm:mb-8">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-orange-700">
-            Sale Items
-          </h2>
-          <p className="text-sm sm:text-base">
-            All sale or discounted items are final and{" "}
-            <span className="font-semibold">not eligible</span> for return,
-            exchange, or refund.
+          <p className="text-sm sm:text-base mt-2">
+            In such cases, refunds will be processed within 
+            <span className="font-semibold"> 7 business days </span> 
+            and credited to your original payment method within 
+            <span className="font-semibold"> 15 working days</span>, 
+            subject to delays.
           </p>
         </section>
 
         <section>
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 text-orange-700">
-            Refund Policy for International Orders
+            Contact Us
           </h2>
           <p className="text-sm sm:text-base">
-            Refunds for international orders will be processed within{" "}
-            <span className="font-semibold">40-45 days</span> in case of a
-            delivery issue.
+            If you have any questions about our Refund Policy, please contact us:
           </p>
-          <p className="mt-4">
-            For further queries, contact us at{" "}
-            <a href="mailto:support@sobhagya.in" className="text-blue-600">
-              support@sobhagya.in
-            </a>
-            .
-          </p>
+          <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base mt-2">
+            <li><strong>By email:</strong> <a href="mailto:support@sobhagya.in" className="text-blue-600">support@sobhagya.in</a></li>
+            <li><strong>By Address:</strong> F-10/9, Mandir Marg, Block-F, Opp. Lovely Public School, Krishna Nagar, Delhi East, Delhi DL 110051, IN.</li>
+          </ul>
         </section>
       </div>
     </div>

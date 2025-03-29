@@ -169,7 +169,7 @@ const Footer: React.FC = () => {
                 href="https://www.sobhagya.in"
                 className="text-white hover:text-orange-400  "
               >
-                www.sobhagya.in
+                www.sohbhagya.com
               </a>
             </div>
             <div className="flex items-center gap-x-2">

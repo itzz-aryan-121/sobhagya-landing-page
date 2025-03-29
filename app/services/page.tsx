@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image'
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function Services() {
@@ -144,9 +145,11 @@ export default function Services() {
               <p className="text-[#F7971D] font-semibold text-lg mt-3">
                 Book your consultation now via chat, call, or video and take the first step toward clarity and success!
               </p>
+              <Link href="https://play.google.com/store/apps/details?id=com.sobhagya.sobhagya&hl=en_IN" target='_blank'>
               <button className="mt-6 bg-white text-[#F7971D] py-3 sm:py-4 px-8 sm:px-16 rounded-lg font-semibold text-base sm:text-lg shadow-md hover:bg-orange-600 hover:text-white transition">
                 Book Now
               </button>
+              </Link>
             </div>
           </div>
         </div>
